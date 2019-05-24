@@ -84,7 +84,7 @@ if (txtArchivoXML.Text.Trim().Length == 0)
 
 Al término el sistema te indica el resultado del timbrado además te mostrará el timbre fiscal:
 
-![C# badge](img/timbrado-timbre.png)
+![C# badge](img/timbrado-timbre.PNG)
 
 
 Versión de C# usada
@@ -160,7 +160,7 @@ if (txtFolioFiscal1.Text.Trim().Length == 0 && txtFolioFiscal2.Text.Trim().Lengt
 
 Ejecuta el botón enviar cancelación, antes de ejecutar el código deberás de actualizar los valores con tus datos fiscales; al término de la ejecución obtendrás la respuesta: 
 
-![C# badge](img/Cancelar-CFDI.png)
+![C# badge](img/Cancelar-CFDI.PNG)
 
 ## Documentación Adicional
 
