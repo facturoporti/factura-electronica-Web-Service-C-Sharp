@@ -1,10 +1,10 @@
 <div align="center">
 
-![banner](GitHub.png)
+![banner](img/GitHub.png)
 
 # Código en C# del Servicio Web  para Timbrar y Cancelar
 
-![C# badge](subtitulo-badge.png)
+![C# badge](img/subtitulo-badge.png)
 
 </div>
 
@@ -29,7 +29,7 @@ Obten la última versión de FacturoPorTi C# en:
 
 Descarga el repositorio que contiene lo necesarios para realizar el proceso de timbrado. 
 
-![C# badge](timbrado.png)
+![C# badge](img/Timbrado.png)
 
 Selecciona el archivo presiona timbrar, el sistema realizará lo siguiente: 
 
@@ -84,7 +84,7 @@ if (txtArchivoXML.Text.Trim().Length == 0)
 
 Al término el sistema te indica el resultado del timbrado además te mostrará el timbre fiscal:
 
-![C# badge](timbrado-timbre.png)
+![C# badge](img/timbrado-timbre.PNG)
 
 
 Versión de C# usada
@@ -98,7 +98,7 @@ Visual Studio 2017 Community con Framework 4.5
 
 Ingresa el folio fiscal (UUID) para realizar la cancelación: 
 
-![C# badge](Cancelacion.png)
+![C# badge](img/Cancelacion.png)
 
 ```csharp
 if (txtFolioFiscal1.Text.Trim().Length == 0 && txtFolioFiscal2.Text.Trim().Length == 0)
@@ -160,7 +160,7 @@ if (txtFolioFiscal1.Text.Trim().Length == 0 && txtFolioFiscal2.Text.Trim().Lengt
 
 Ejecuta el botón enviar cancelación, antes de ejecutar el código deberás de actualizar los valores con tus datos fiscales; al término de la ejecución obtendrás la respuesta: 
 
-![C# badge](Cancelar-CFDI.png)
+![C# badge](img/Cancelar-CFDI.PNG)
 
 ## Documentación Adicional
 
