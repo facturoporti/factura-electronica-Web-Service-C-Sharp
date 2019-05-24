@@ -1,0 +1,28 @@
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Debug\SECFDI.KitDesarrollo.exe.config
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Debug\SECFDI.KitDesarrollo.exe
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Debug\SECFDI.KitDesarrollo.pdb
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Debug\es-MX\SECFDI.KitDesarrollo.resources.dll
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.frmGeneraCFDI.resources
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.frmPrincipal.resources
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.Properties.Resources.resources
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.frmPrincipal.es-MX.resources
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.csproj.GenerateResource.Cache
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\es-MX\SECFDI.KitDesarrollo.resources.dll
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.exe
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.pdb
+G:\Proy\Utilerias\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Debug\SECFDI.KitDesarrollo.exe.config
+G:\Proy\Utilerias\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.exe
+G:\Proy\Utilerias\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.pdb
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Debug\SECFDI.KitDesarrollo.exe.config
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.exe
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.pdb
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.frmGeneraCFDI.resources
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.frmPrincipal.resources
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.Properties.Resources.resources
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.frmPrincipal.es-MX.resources
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.csproj.GenerateResource.Cache
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Debug\SECFDI.KitDesarrollo.exe
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Debug\SECFDI.KitDesarrollo.pdb
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Debug\es-MX\SECFDI.KitDesarrollo.resources.dll
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\es-MX\SECFDI.KitDesarrollo.resources.dll
+C:\Alejandro\Pruebas\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Debug\SECFDI.KitDesarrollo.csprojResolveAssemblyReference.cache

@@ -1,0 +1,12 @@
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Release\SECFDI.KitDesarrollo.exe.config
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Release\SECFDI.KitDesarrollo.exe
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Release\SECFDI.KitDesarrollo.pdb
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\bin\Release\es-MX\SECFDI.KitDesarrollo.resources.dll
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Release\SECFDI.KitDesarrollo.frmGeneraCFDI.resources
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Release\SECFDI.KitDesarrollo.frmPrincipal.resources
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Release\SECFDI.KitDesarrollo.Properties.Resources.resources
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Release\SECFDI.KitDesarrollo.frmPrincipal.es-MX.resources
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Release\SECFDI.KitDesarrollo.csproj.GenerateResource.Cache
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Release\es-MX\SECFDI.KitDesarrollo.resources.dll
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Release\SECFDI.KitDesarrollo.exe
+G:\Proy\SECFDI 3.3\CODIGO_SECFDI\SECFDI.KitDesarrollo\SECFDI.KitDesarrollo\obj\x86\Release\SECFDI.KitDesarrollo.pdb

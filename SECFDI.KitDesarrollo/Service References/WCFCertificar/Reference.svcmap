@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a0615a01-7703-4df4-b0ae-ab69f69d476c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://wcfpruebas.facturoporti.com.mx/Certificar/Servicios.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Certificar.wsdl" MetadataType="Wsdl" ID="351888d1-9f01-4e90-8076-c026ef967ec7" SourceId="1" SourceUrl="http://wcfpruebas.facturoporti.com.mx/Certificar/Servicios.svc?wsdl" />
+    <MetadataFile FileName="Servicios.xsd" MetadataType="Schema" ID="99af634c-3601-416c-ac69-c884c61d3423" SourceId="1" SourceUrl="http://wcfpruebas.facturoporti.com.mx/Certificar/Servicios.svc?xsd=xsd1" />
+    <MetadataFile FileName="Servicios1.xsd" MetadataType="Schema" ID="c514eb66-b20f-4080-a2e5-2e3e3ca62a91" SourceId="1" SourceUrl="http://wcfpruebas.facturoporti.com.mx/Certificar/Servicios.svc?xsd=xsd2" />
+    <MetadataFile FileName="Servicios2.xsd" MetadataType="Schema" ID="a0376dbc-5c5d-44eb-a2b9-fa544c83e801" SourceId="1" SourceUrl="http://wcfpruebas.facturoporti.com.mx/Certificar/Servicios.svc?xsd=xsd0" />
+    <MetadataFile FileName="Servicios3.xsd" MetadataType="Schema" ID="9a703409-56b1-4364-a17e-0d36e857d5b2" SourceId="1" SourceUrl="http://wcfpruebas.facturoporti.com.mx/Certificar/Servicios.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SECFDI.WCFLibCertificar" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SECFDI.WCFLibCertificar" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wcfpruebas.facturoporti.com.mx/Certificar/Servicios.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="AutenticarPeticion">
+    <xs:sequence>
+      <xs:element name="Contrasenia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdProveedorUsuario" nillable="true" type="xs:string" />
+      <xs:element name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutenticarPeticion" nillable="true" type="tns:AutenticarPeticion" />
+  <xs:complexType name="AutenticarRespuesta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WCFRespuesta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Hash" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutenticarRespuesta" nillable="true" type="tns:AutenticarRespuesta" />
+  <xs:complexType name="WCFRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estatus" nillable="true" type="tns:Estatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WCFRespuesta" nillable="true" type="tns:WCFRespuesta" />
+  <xs:complexType name="Estatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DetieneEjecucionProveedor" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InformacionTecnica" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Estatus" nillable="true" type="tns:Estatus" />
+  <xs:complexType name="TimbrarCFDIPeticion">
+    <xs:sequence>
+      <xs:element name="XMLEntrada" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimbrarCFDIPeticion" nillable="true" type="tns:TimbrarCFDIPeticion" />
+  <xs:complexType name="TimbrarCFDIRespuesta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WCFRespuesta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Timbrado" nillable="true" type="tns:Timbre" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TimbrarCFDIRespuesta" nillable="true" type="tns:TimbrarCFDIRespuesta" />
+  <xs:complexType name="Timbre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdVersionTimbrado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CadenaOriginal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SelloCFD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SelloSAT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoCertificado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RfcProvCertif" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Leyenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimbreXML" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Timbre" nillable="true" type="tns:Timbre" />
+  <xs:complexType name="CancelarCFDIPeticion">
+    <xs:sequence>
+      <xs:element name="RFC" nillable="true" type="xs:string" />
+      <xs:element name="XMLEntrada" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CancelarCFDIPeticion" nillable="true" type="tns:CancelarCFDIPeticion" />
+  <xs:complexType name="CancelarCFDIRespuesta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WCFRespuesta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FoliosRespuesta" nillable="true" type="tns:ArrayOfFoliosRespuesta" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CancelarCFDIRespuesta" nillable="true" type="tns:CancelarCFDIRespuesta" />
+  <xs:complexType name="ArrayOfFoliosRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FoliosRespuesta" nillable="true" type="tns:FoliosRespuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFoliosRespuesta" nillable="true" type="tns:ArrayOfFoliosRespuesta" />
+  <xs:complexType name="FoliosRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estatus" nillable="true" type="tns:Estatus" />
+      <xs:element minOccurs="0" name="UUID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FoliosRespuesta" nillable="true" type="tns:FoliosRespuesta" />
+  <xs:complexType name="GeneraCFDIPeticion">
+    <xs:sequence>
+      <xs:element name="DatosGenerales" nillable="true" type="tns:DatosGenerales" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="Encabezado" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="Detalle" nillable="true" type="q2:ArrayOfKeyValueOfstringstring" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Complemento" nillable="true" type="q3:ArrayOfKeyValueOfstringstring" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Addenda" nillable="true" type="q4:ArrayOfKeyValueOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeneraCFDIPeticion" nillable="true" type="tns:GeneraCFDIPeticion" />
+  <xs:complexType name="DatosGenerales">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Configuracion" nillable="true" type="q5:ArrayOfKeyValueOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatosGenerales" nillable="true" type="tns:DatosGenerales" />
+  <xs:complexType name="GeneraCFDIRespuesta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WCFRespuesta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CFDITimbrado" nillable="true" type="tns:CFDITimbrado" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GeneraCFDIRespuesta" nillable="true" type="tns:GeneraCFDIRespuesta" />
+  <xs:complexType name="CFDITimbrado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Respuesta" nillable="true" type="tns:CFDITimbre" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CFDITimbrado" nillable="true" type="tns:CFDITimbrado" />
+  <xs:complexType name="CFDITimbre">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="Timbre" nillable="true" type="q6:ArrayOfKeyValueOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CFDITimbre" nillable="true" type="tns:CFDITimbre" />
+</xs:schema>
