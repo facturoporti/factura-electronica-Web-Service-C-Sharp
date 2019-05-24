@@ -162,6 +162,8 @@ Ejecuta el botón enviar cancelación, antes de ejecutar el código deberás de 
 
 ![C# badge](img/Cancelar-CFDI.PNG)
 
+**Nota: El certificado digital que se debe de enviar es uno de tipo PFX si no se manda el correcto mandará error la cancelación**
+
 ## Documentación Adicional
 
 Si deseas mas información del servicio web descarga la guía de integración,   contiene todos los atributos y su descripción además de los valores que son permitidos http://software.facturoporti.com.mx/WebService/Manual-Integracion-Web-Service.pdf
