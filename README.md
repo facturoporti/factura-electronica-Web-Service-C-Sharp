@@ -29,7 +29,7 @@ Obten la última versión de FacturoPorTi C# en:
 
 Descarga el repositorio que contiene lo necesarios para realizar el proceso de timbrado. 
 
-![C# badge](img/timbrado.png)
+![C# badge](img/Timbrado.png)
 
 Selecciona el archivo presiona timbrar, el sistema realizará lo siguiente: 
 
