@@ -108,7 +108,9 @@ namespace SECFDI.KitDesarrollo
                 cancelar.RFC = "AAA010101AAA"; // RFC del emisor del CFDI;
                 cancelar.Password = "12345678a";
 
-                Archivos archivo = new Archivos();                
+                Archivos archivo = new Archivos();
+
+                // El certificado que recibe es en formato PFX si no se envia el correcto marcará elrror la cancelacion 
                 cancelar.PFX = archivo.ConvertirStreamToByte(archivo.Abrir(ObtieneDirectorioAplicacion() + @"\Certificado\AAA010101AAA.pfx"));  //"Se debe de enviar el certificado en formato PFX para realizar la cancelacion";
 
                 List<string> folios = new List<string>();
