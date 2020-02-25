@@ -137,11 +137,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\WCFCertificar\Certificar.wsdl" />
+    <None Include="Service References\WCFCertificar\Certificar1.wsdl" />
     <None Include="Service References\WCFCertificar\SECFDI.KitDesarrollo.WCFCertificar.AutenticarRespuesta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WCFCertificar\SECFDI.KitDesarrollo.WCFCertificar.CancelarCFDIRespuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFCertificar\SECFDI.KitDesarrollo.WCFCertificar.ConsultaEstatusRespuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFCertificar\SECFDI.KitDesarrollo.WCFCertificar.ConsultaTimbresRestantesRespuesta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WCFCertificar\SECFDI.KitDesarrollo.WCFCertificar.GeneraCFDIApiRespuesta.datasource">
@@ -150,16 +156,16 @@
     <None Include="Service References\WCFCertificar\SECFDI.KitDesarrollo.WCFCertificar.TimbrarCFDIRespuesta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WCFCertificar\Servicios.xsd">
+    <None Include="Service References\WCFCertificar\Servicios4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\WCFCertificar\Servicios1.xsd">
+    <None Include="Service References\WCFCertificar\Servicios41.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\WCFCertificar\Servicios2.xsd">
+    <None Include="Service References\WCFCertificar\Servicios42.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\WCFCertificar\Servicios3.xsd">
+    <None Include="Service References\WCFCertificar\Servicios43.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -190,6 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logotipos\Logotipo.PNG" />
+    <None Include="Service References\WCFCertificar\Servicios1.disco" />
     <Content Include="XML\XEXX010101000_FAC_AC2_20190524.xml" />
     <None Include="Service References\WCFCertificar\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
@@ -197,7 +204,6 @@
     </None>
     <None Include="Service References\WCFCertificar\configuration.svcinfo" />
     <None Include="Service References\WCFCertificar\configuration91.svcinfo" />
-    <None Include="Service References\WCFCertificar\Servicios.disco" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PDF\" />

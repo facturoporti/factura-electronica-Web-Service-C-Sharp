@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:complexType name="AutenticarPeticion">
     <xs:sequence>
       <xs:element name="Contrasenia" nillable="true" type="xs:string" />
@@ -62,6 +62,7 @@
   <xs:complexType name="FoliosRespuesta">
     <xs:sequence>
       <xs:element minOccurs="0" name="Estatus" nillable="true" type="tns:Estatus" />
+      <xs:element minOccurs="0" name="EstatusCancelacionSAT" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UUID" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -121,6 +122,8 @@
       <xs:element minOccurs="0" name="OpcionDecimales" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ReceptorEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceptorEmailCC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceptorEmailCCO" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SellaCFDI" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TimbraCFDI" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TipoCFDI" nillable="true" type="xs:string" />
@@ -387,8 +390,11 @@
   <xs:element name="CFDITimbreRespuesta" nillable="true" type="tns:CFDITimbreRespuesta" />
   <xs:complexType name="CancelarApiCFDIPeticion">
     <xs:sequence>
-      <xs:element name="PFX" nillable="true" type="xs:string" />
-      <xs:element name="PFXPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Certificado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CertificadoPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LlavePrivada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PFX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PFXPassword" nillable="true" type="xs:string" />
       <xs:element name="Password" nillable="true" type="xs:string" />
       <xs:element name="RFC" nillable="true" type="xs:string" />
       <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="UUIDs" nillable="true" type="q2:ArrayOfstring" />
@@ -396,4 +402,41 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CancelarApiCFDIPeticion" nillable="true" type="tns:CancelarApiCFDIPeticion" />
+  <xs:complexType name="ConsultaEstatusPeticion">
+    <xs:sequence>
+      <xs:element name="Password" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="UUIDs" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultaEstatusPeticion" nillable="true" type="tns:ConsultaEstatusPeticion" />
+  <xs:complexType name="ConsultaEstatusRespuesta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WCFRespuesta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FoliosRespuesta" nillable="true" type="tns:ArrayOfFoliosRespuesta" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultaEstatusRespuesta" nillable="true" type="tns:ConsultaEstatusRespuesta" />
+  <xs:complexType name="ConsultaTimbresRestantesPeticion">
+    <xs:sequence>
+      <xs:element name="Password" nillable="true" type="xs:string" />
+      <xs:element name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultaTimbresRestantesPeticion" nillable="true" type="tns:ConsultaTimbresRestantesPeticion" />
+  <xs:complexType name="ConsultaTimbresRestantesRespuesta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WCFRespuesta">
+        <xs:sequence>
+          <xs:element name="CreditosRestantes" type="xs:int" />
+          <xs:element minOccurs="0" name="FechaCompra" nillable="true" type="xs:string" />
+          <xs:element name="TimbresUtilizados" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultaTimbresRestantesRespuesta" nillable="true" type="tns:ConsultaTimbresRestantesRespuesta" />
 </xs:schema>

@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Certificar" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="SoapHttps_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado" />
-      <xsd:import schemaLocation="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado" />
+      <xsd:import schemaLocation="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICertificar_Autenticar_InputMessage">
@@ -38,6 +63,18 @@
   <wsdl:message name="ICertificar_ApiCancelarCFDI_OutputMessage">
     <wsdl:part name="parameters" element="tns:ApiCancelarCFDIResponse" />
   </wsdl:message>
+  <wsdl:message name="ICertificar_ApiConsultaEstatusCFDI_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApiConsultaEstatusCFDI" />
+  </wsdl:message>
+  <wsdl:message name="ICertificar_ApiConsultaEstatusCFDI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApiConsultaEstatusCFDIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICertificar_ApiConsultaTimbresRestantes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApiConsultaTimbresRestantes" />
+  </wsdl:message>
+  <wsdl:message name="ICertificar_ApiConsultaTimbresRestantes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApiConsultaTimbresRestantesResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICertificar">
     <wsdl:operation name="Autenticar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICertificar/Autenticar" message="tns:ICertificar_Autenticar_InputMessage" />
@@ -58,6 +95,14 @@
     <wsdl:operation name="ApiCancelarCFDI">
       <wsdl:input wsaw:Action="http://tempuri.org/ICertificar/ApiCancelarCFDI" message="tns:ICertificar_ApiCancelarCFDI_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICertificar/ApiCancelarCFDIResponse" message="tns:ICertificar_ApiCancelarCFDI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApiConsultaEstatusCFDI">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICertificar/ApiConsultaEstatusCFDI" message="tns:ICertificar_ApiConsultaEstatusCFDI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICertificar/ApiConsultaEstatusCFDIResponse" message="tns:ICertificar_ApiConsultaEstatusCFDI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApiConsultaTimbresRestantes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICertificar/ApiConsultaTimbresRestantes" message="tns:ICertificar_ApiConsultaTimbresRestantes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICertificar/ApiConsultaTimbresRestantesResponse" message="tns:ICertificar_ApiConsultaTimbresRestantes_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Soap" type="tns:ICertificar">
@@ -107,10 +152,98 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ApiConsultaEstatusCFDI">
+      <soap:operation soapAction="http://tempuri.org/ICertificar/ApiConsultaEstatusCFDI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApiConsultaTimbresRestantes">
+      <soap:operation soapAction="http://tempuri.org/ICertificar/ApiConsultaTimbresRestantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SoapHttps" type="tns:ICertificar">
+    <wsp:PolicyReference URI="#SoapHttps_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Autenticar">
+      <soap:operation soapAction="http://tempuri.org/ICertificar/Autenticar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarCFDICualquierPAC">
+      <soap:operation soapAction="http://tempuri.org/ICertificar/CancelarCFDICualquierPAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TimbradoMultiEmpresas">
+      <soap:operation soapAction="http://tempuri.org/ICertificar/TimbradoMultiEmpresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApiTimbrarCFDI">
+      <soap:operation soapAction="http://tempuri.org/ICertificar/ApiTimbrarCFDI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApiCancelarCFDI">
+      <soap:operation soapAction="http://tempuri.org/ICertificar/ApiCancelarCFDI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApiConsultaEstatusCFDI">
+      <soap:operation soapAction="http://tempuri.org/ICertificar/ApiConsultaEstatusCFDI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApiConsultaTimbresRestantes">
+      <soap:operation soapAction="http://tempuri.org/ICertificar/ApiConsultaTimbresRestantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Certificar">
     <wsdl:port name="Soap" binding="tns:Soap">
       <soap:address location="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc/Soap" />
+    </wsdl:port>
+    <wsdl:port name="SoapHttps" binding="tns:SoapHttps">
+      <soap:address location="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc/Soap" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

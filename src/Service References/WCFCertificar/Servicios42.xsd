@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado" />
+  <xs:import schemaLocation="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado" />
   <xs:element name="Autenticar">
     <xs:complexType>
       <xs:sequence>
@@ -70,6 +70,34 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado" minOccurs="0" name="ApiCancelarCFDIResult" nillable="true" type="q12:CancelarCFDIRespuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApiConsultaEstatusCFDI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado" minOccurs="0" name="parametro" nillable="true" type="q13:ConsultaEstatusPeticion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApiConsultaEstatusCFDIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado" minOccurs="0" name="ApiConsultaEstatusCFDIResult" nillable="true" type="q14:ConsultaEstatusRespuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApiConsultaTimbresRestantes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado" minOccurs="0" name="parametro" nillable="true" type="q15:ConsultaTimbresRestantesPeticion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApiConsultaTimbresRestantesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado" minOccurs="0" name="ApiConsultaTimbresRestantesResult" nillable="true" type="q16:ConsultaTimbresRestantesRespuesta" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

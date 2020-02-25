@@ -79,6 +79,8 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SECFDI.KitDesarrollo.WCFCertificar.CancelarCFDIRespuesta))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SECFDI.KitDesarrollo.WCFCertificar.TimbrarCFDIRespuesta))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SECFDI.KitDesarrollo.WCFCertificar.GeneraCFDIApiRespuesta))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SECFDI.KitDesarrollo.WCFCertificar.ConsultaEstatusRespuesta))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SECFDI.KitDesarrollo.WCFCertificar.ConsultaTimbresRestantesRespuesta))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SECFDI.KitDesarrollo.WCFCertificar.AutenticarRespuesta))]
     public partial class WCFRespuesta : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -301,6 +303,82 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ConsultaEstatusRespuesta", Namespace="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado")]
+    [System.SerializableAttribute()]
+    public partial class ConsultaEstatusRespuesta : SECFDI.KitDesarrollo.WCFCertificar.WCFRespuesta {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SECFDI.KitDesarrollo.WCFCertificar.FoliosRespuesta[] FoliosRespuestaField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SECFDI.KitDesarrollo.WCFCertificar.FoliosRespuesta[] FoliosRespuesta {
+            get {
+                return this.FoliosRespuestaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FoliosRespuestaField, value) != true)) {
+                    this.FoliosRespuestaField = value;
+                    this.RaisePropertyChanged("FoliosRespuesta");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ConsultaTimbresRestantesRespuesta", Namespace="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado")]
+    [System.SerializableAttribute()]
+    public partial class ConsultaTimbresRestantesRespuesta : SECFDI.KitDesarrollo.WCFCertificar.WCFRespuesta {
+        
+        private int CreditosRestantesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaCompraField;
+        
+        private int TimbresUtilizadosField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int CreditosRestantes {
+            get {
+                return this.CreditosRestantesField;
+            }
+            set {
+                if ((this.CreditosRestantesField.Equals(value) != true)) {
+                    this.CreditosRestantesField = value;
+                    this.RaisePropertyChanged("CreditosRestantes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaCompra {
+            get {
+                return this.FechaCompraField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaCompraField, value) != true)) {
+                    this.FechaCompraField = value;
+                    this.RaisePropertyChanged("FechaCompra");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int TimbresUtilizados {
+            get {
+                return this.TimbresUtilizadosField;
+            }
+            set {
+                if ((this.TimbresUtilizadosField.Equals(value) != true)) {
+                    this.TimbresUtilizadosField = value;
+                    this.RaisePropertyChanged("TimbresUtilizados");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AutenticarRespuesta", Namespace="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado")]
     [System.SerializableAttribute()]
     public partial class AutenticarRespuesta : SECFDI.KitDesarrollo.WCFCertificar.WCFRespuesta {
@@ -335,6 +413,9 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
         private SECFDI.KitDesarrollo.WCFCertificar.Estatus EstatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstatusCancelacionSATField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UUIDField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -356,6 +437,19 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
                 if ((object.ReferenceEquals(this.EstatusField, value) != true)) {
                     this.EstatusField = value;
                     this.RaisePropertyChanged("Estatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EstatusCancelacionSAT {
+            get {
+                return this.EstatusCancelacionSATField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstatusCancelacionSATField, value) != true)) {
+                    this.EstatusCancelacionSATField = value;
+                    this.RaisePropertyChanged("EstatusCancelacionSAT");
                 }
             }
         }
@@ -1126,6 +1220,12 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
         private string ReceptorEmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ReceptorEmailCCField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ReceptorEmailCCOField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SellaCFDIField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1315,6 +1415,32 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
                 if ((object.ReferenceEquals(this.ReceptorEmailField, value) != true)) {
                     this.ReceptorEmailField = value;
                     this.RaisePropertyChanged("ReceptorEmail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ReceptorEmailCC {
+            get {
+                return this.ReceptorEmailCCField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReceptorEmailCCField, value) != true)) {
+                    this.ReceptorEmailCCField = value;
+                    this.RaisePropertyChanged("ReceptorEmailCC");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ReceptorEmailCCO {
+            get {
+                return this.ReceptorEmailCCOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReceptorEmailCCOField, value) != true)) {
+                    this.ReceptorEmailCCOField = value;
+                    this.RaisePropertyChanged("ReceptorEmailCCO");
                 }
             }
         }
@@ -3965,8 +4091,19 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CertificadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CertificadoPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LlavePrivadaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PFXField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PFXPasswordField;
         
         private string PasswordField;
@@ -3987,7 +4124,46 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Certificado {
+            get {
+                return this.CertificadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CertificadoField, value) != true)) {
+                    this.CertificadoField = value;
+                    this.RaisePropertyChanged("Certificado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CertificadoPassword {
+            get {
+                return this.CertificadoPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CertificadoPasswordField, value) != true)) {
+                    this.CertificadoPasswordField = value;
+                    this.RaisePropertyChanged("CertificadoPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LlavePrivada {
+            get {
+                return this.LlavePrivadaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LlavePrivadaField, value) != true)) {
+                    this.LlavePrivadaField = value;
+                    this.RaisePropertyChanged("LlavePrivada");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string PFX {
             get {
                 return this.PFXField;
@@ -4000,7 +4176,7 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string PFXPassword {
             get {
                 return this.PFXPasswordField;
@@ -4075,6 +4251,139 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ConsultaEstatusPeticion", Namespace="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado")]
+    [System.SerializableAttribute()]
+    public partial class ConsultaEstatusPeticion : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private string PasswordField;
+        
+        private string[] UUIDsField;
+        
+        private string UsuarioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string[] UUIDs {
+            get {
+                return this.UUIDsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UUIDsField, value) != true)) {
+                    this.UUIDsField = value;
+                    this.RaisePropertyChanged("UUIDs");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string Usuario {
+            get {
+                return this.UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
+                    this.UsuarioField = value;
+                    this.RaisePropertyChanged("Usuario");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ConsultaTimbresRestantesPeticion", Namespace="http://schemas.datacontract.org/2004/07/SECFDI.WCFTimbrado")]
+    [System.SerializableAttribute()]
+    public partial class ConsultaTimbresRestantesPeticion : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private string PasswordField;
+        
+        private string UsuarioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string Usuario {
+            get {
+                return this.UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
+                    this.UsuarioField = value;
+                    this.RaisePropertyChanged("Usuario");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WCFCertificar.ICertificar")]
     public interface ICertificar {
@@ -4108,6 +4417,18 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICertificar/ApiCancelarCFDI", ReplyAction="http://tempuri.org/ICertificar/ApiCancelarCFDIResponse")]
         System.Threading.Tasks.Task<SECFDI.KitDesarrollo.WCFCertificar.CancelarCFDIRespuesta> ApiCancelarCFDIAsync(SECFDI.KitDesarrollo.WCFCertificar.CancelarApiCFDIPeticion cfdi);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICertificar/ApiConsultaEstatusCFDI", ReplyAction="http://tempuri.org/ICertificar/ApiConsultaEstatusCFDIResponse")]
+        SECFDI.KitDesarrollo.WCFCertificar.ConsultaEstatusRespuesta ApiConsultaEstatusCFDI(SECFDI.KitDesarrollo.WCFCertificar.ConsultaEstatusPeticion parametro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICertificar/ApiConsultaEstatusCFDI", ReplyAction="http://tempuri.org/ICertificar/ApiConsultaEstatusCFDIResponse")]
+        System.Threading.Tasks.Task<SECFDI.KitDesarrollo.WCFCertificar.ConsultaEstatusRespuesta> ApiConsultaEstatusCFDIAsync(SECFDI.KitDesarrollo.WCFCertificar.ConsultaEstatusPeticion parametro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICertificar/ApiConsultaTimbresRestantes", ReplyAction="http://tempuri.org/ICertificar/ApiConsultaTimbresRestantesResponse")]
+        SECFDI.KitDesarrollo.WCFCertificar.ConsultaTimbresRestantesRespuesta ApiConsultaTimbresRestantes(SECFDI.KitDesarrollo.WCFCertificar.ConsultaTimbresRestantesPeticion parametro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICertificar/ApiConsultaTimbresRestantes", ReplyAction="http://tempuri.org/ICertificar/ApiConsultaTimbresRestantesResponse")]
+        System.Threading.Tasks.Task<SECFDI.KitDesarrollo.WCFCertificar.ConsultaTimbresRestantesRespuesta> ApiConsultaTimbresRestantesAsync(SECFDI.KitDesarrollo.WCFCertificar.ConsultaTimbresRestantesPeticion parametro);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -4175,6 +4496,22 @@ namespace SECFDI.KitDesarrollo.WCFCertificar {
         
         public System.Threading.Tasks.Task<SECFDI.KitDesarrollo.WCFCertificar.CancelarCFDIRespuesta> ApiCancelarCFDIAsync(SECFDI.KitDesarrollo.WCFCertificar.CancelarApiCFDIPeticion cfdi) {
             return base.Channel.ApiCancelarCFDIAsync(cfdi);
+        }
+        
+        public SECFDI.KitDesarrollo.WCFCertificar.ConsultaEstatusRespuesta ApiConsultaEstatusCFDI(SECFDI.KitDesarrollo.WCFCertificar.ConsultaEstatusPeticion parametro) {
+            return base.Channel.ApiConsultaEstatusCFDI(parametro);
+        }
+        
+        public System.Threading.Tasks.Task<SECFDI.KitDesarrollo.WCFCertificar.ConsultaEstatusRespuesta> ApiConsultaEstatusCFDIAsync(SECFDI.KitDesarrollo.WCFCertificar.ConsultaEstatusPeticion parametro) {
+            return base.Channel.ApiConsultaEstatusCFDIAsync(parametro);
+        }
+        
+        public SECFDI.KitDesarrollo.WCFCertificar.ConsultaTimbresRestantesRespuesta ApiConsultaTimbresRestantes(SECFDI.KitDesarrollo.WCFCertificar.ConsultaTimbresRestantesPeticion parametro) {
+            return base.Channel.ApiConsultaTimbresRestantes(parametro);
+        }
+        
+        public System.Threading.Tasks.Task<SECFDI.KitDesarrollo.WCFCertificar.ConsultaTimbresRestantesRespuesta> ApiConsultaTimbresRestantesAsync(SECFDI.KitDesarrollo.WCFCertificar.ConsultaTimbresRestantesPeticion parametro) {
+            return base.Channel.ApiConsultaTimbresRestantesAsync(parametro);
         }
     }
 }

@@ -19,15 +19,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Certificar.wsdl" MetadataType="Wsdl" ID="bde50249-ecc5-4c07-807f-6e474b1b5f0f" SourceId="1" SourceUrl="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?wsdl" />
-    <MetadataFile FileName="Servicios.disco" MetadataType="Disco" ID="3034d622-d90c-4184-83dc-086ef6a26624" SourceId="1" SourceUrl="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?disco" />
-    <MetadataFile FileName="Servicios.xsd" MetadataType="Schema" ID="e6b6c996-1452-42a8-871d-778b3cc0807d" SourceId="1" SourceUrl="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd1" />
-    <MetadataFile FileName="Servicios1.xsd" MetadataType="Schema" ID="ed048d46-7a78-4b59-be97-b405332f1a98" SourceId="1" SourceUrl="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd2" />
-    <MetadataFile FileName="Servicios2.xsd" MetadataType="Schema" ID="11f5ce6b-51bb-4aa3-86de-7020945595b9" SourceId="1" SourceUrl="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd3" />
-    <MetadataFile FileName="Servicios3.xsd" MetadataType="Schema" ID="53eb543f-99dc-4dbb-bdff-05fcb2a8df1b" SourceId="1" SourceUrl="http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd0" />
+    <MetadataFile FileName="Servicios1.disco" MetadataType="Disco" ID="66567371-ca7d-44fa-8e24-3ceb77efb2e6" SourceId="1" SourceUrl="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?disco" />
+    <MetadataFile FileName="Servicios4.xsd" MetadataType="Schema" ID="3d83a5d4-0e88-4534-acb2-c1d6a04bb604" SourceId="1" SourceUrl="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd2" />
+    <MetadataFile FileName="Certificar1.wsdl" MetadataType="Wsdl" ID="07503ef9-d032-4995-a3b4-b414960cddd2" SourceId="1" SourceUrl="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?wsdl" />
+    <MetadataFile FileName="Servicios41.xsd" MetadataType="Schema" ID="9c0962b7-c2b1-4897-9bd1-9cc4888a6592" SourceId="1" SourceUrl="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd3" />
+    <MetadataFile FileName="Servicios42.xsd" MetadataType="Schema" ID="32f84ae2-5c75-48e0-b3ad-4df607048f50" SourceId="1" SourceUrl="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd0" />
+    <MetadataFile FileName="Servicios43.xsd" MetadataType="Schema" ID="61521e29-cf84-47c7-bf73-7a5733e25b93" SourceId="1" SourceUrl="https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
